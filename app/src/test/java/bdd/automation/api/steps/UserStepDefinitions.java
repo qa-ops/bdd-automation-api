@@ -42,10 +42,11 @@ public class UserStepDefinitions {
         then().
             contentType(ContentType.JSON).
             statusCode(HttpStatus.SC_OK).
-            body("username", is( expectedUser.get("username")));
+            body("username", is(expectedUser.get("username")));
     }
 
     @When("I do a POST to {word} with the docstring:")
+    @Quando("eu faço um POST para {word} com a seguinte docString:")
     public void iDoAPOSTToVUserWithTheDoctstring(String endpoint, DocString docString) {
         expectedUser.put("username", "theUser");
 
