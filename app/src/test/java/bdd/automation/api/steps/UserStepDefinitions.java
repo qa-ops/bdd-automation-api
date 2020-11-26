@@ -1,5 +1,6 @@
 package bdd.automation.api.steps;
 
+import bdd.automation.api.support.domain.User;
 import io.cucumber.docstring.DocString;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -17,7 +18,12 @@ import static org.hamcrest.CoreMatchers.is;
 
 public class UserStepDefinitions {
 
+    private static final String CREATE_USER_ENDPOINT = "/v3/user";
+    private static final String USER_ENDPOINT = "/v3/user/{name}";
+
     private Map<String, String> expectedUser = new HashMap<>();
+
+    private User user;
 
     @When("I do a POST to {word} with the following values:")
     @Quando("eu faço um POST para {word} com os seguintes valores:")
@@ -53,5 +59,29 @@ public class UserStepDefinitions {
             post(endpoint).
         then().
             statusCode(HttpStatus.SC_OK);
+    }
+
+    @When("I create a user")
+    public void iCreateAUser() {
+        user = User.builder().build();
+
+        given().
+            body(user).
+        when().
+            post(CREATE_USER_ENDPOINT).
+        then().
+            statusCode(HttpStatus.SC_OK);
+
+    }
+
+    @Then("the created user was stored")
+    public void theCreatedUserWasStored() {
+        given().
+            pathParam("name", user.getUsername()).
+        when().
+            get(USER_ENDPOINT).
+        then().
+            statusCode(HttpStatus.SC_OK).
+            body("username", is(user.getUsername()));
     }
 }
