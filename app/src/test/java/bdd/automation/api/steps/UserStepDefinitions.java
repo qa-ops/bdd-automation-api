@@ -6,7 +6,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
-import io.restassured.http.ContentType;
 import org.apache.http.HttpStatus;
 
 import java.util.HashMap;
@@ -61,6 +60,7 @@ public class UserStepDefinitions {
             statusCode(HttpStatus.SC_OK);
     }
 
+    @Quando("crio um usuário")
     @When("I create a user")
     public void iCreateAUser() {
         user = User.builder().build();
@@ -74,6 +74,7 @@ public class UserStepDefinitions {
 
     }
 
+    @Então("o usuário é salvo no sistema")
     @Then("the created user was stored")
     public void theCreatedUserWasStored() {
         given().
