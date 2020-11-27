@@ -1,5 +1,4 @@
  # language: pt
-
  Funcionalidade: Gerenciamento de um usuario da PetSore
 
    Algum contexto de negócio
@@ -19,6 +18,7 @@
      Então quando faço um GET para /v3/user/rafael, o usuário criado é retornado
 
 
+   @quarentine
    Cenario: Cria um usuario na loja usando docString
      Quando eu faço um POST para /v3/user com a seguinte docString:
 #       """json
