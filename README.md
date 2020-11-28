@@ -15,6 +15,7 @@
 ### Requisitos:
 * Java 14
 * Gradle 6.7
+* Docker
 
 
 ### Executar os Testes Localmente
@@ -42,6 +43,7 @@
 ### Requirements:
 * Java 14
 * Gradle 6.7
+* Docker
 
 ### Executing the tests locally
 * Start Swagger Pet Store - `docker run  --name petstore -d -p 12345:8080 swaggerapi/petstore3:unstable`
@@ -50,6 +52,6 @@
 
 ## Video
 
-* [Creating the Project and its dependencies](https://youtu.be/0i72N1Fz_y0) 
-* [Creating the First Scenario](https://youtu.be/A3uiR4quZr4) 
+1. [Creating the Project and its dependencies](https://youtu.be/0i72N1Fz_y0) 
+1. [Creating the First Scenario](https://youtu.be/A3uiR4quZr4) 
 
