@@ -1,6 +1,6 @@
 #### Selecione sua Língua | Select your Language
-<a href='#nome-do-video'><img src="images/pt-br.png" alt="Português" width="50" /></a>
-<a href='#video-name'><img src="images/en.jpg" alt="English" width="50" /></a>
+<a href='#automação-de-testes-de-api-usando-bdd'><img src="images/pt-br.png" alt="Português" width="50" /></a>
+<a href='#api-test-automation-using-bdd'><img src="images/en.jpg" alt="English" width="50" /></a>
 
 
 # Automação de Testes de API usando BDD
