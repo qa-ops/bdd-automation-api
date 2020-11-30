@@ -13,6 +13,7 @@
 * Vídeo 2 - `02-first-feature`
 * Vídeo 3 - `03-first-implementation`
 * Vídeo 4 - `04-docstring`
+* Vídeo 5 - `05-rest-assured-setup`
 
 ### Requisitos:
 * Java 14
