@@ -28,6 +28,7 @@
 
 1. [Criação do Projeto e suas dependências](https://youtu.be/YTKIVemoibA)
 1. [Criando Primerio Cenário](https://youtu.be/dmSimWz21RQ) 
+1. [Codando o Primeiro Cenário](https://youtu.be/qJyYvdAYZzY)
 
 
 ---
@@ -56,4 +57,5 @@
 
 1. [Creating the Project and its dependencies](https://youtu.be/0i72N1Fz_y0) 
 1. [Creating the First Scenario](https://youtu.be/A3uiR4quZr4) 
+1. [Implementing the First Scenario](https://youtu.be/uFoq-XtbBa0)
 
