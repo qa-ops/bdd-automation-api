@@ -1,5 +1,6 @@
 package bdd.automation.api.steps;
 
+import bdd.automation.api.support.api.UserApi;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.restassured.RestAssured;
@@ -8,6 +9,12 @@ import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
 
 public class Config {
+
+    private final UserApi userApi;
+
+    public Config() {
+        userApi = new UserApi();
+    }
 
     @Before
     public void setup() {
@@ -19,10 +26,6 @@ public class Config {
         RestAssured.requestSpecification = new RequestSpecBuilder().
             addHeader("Authorization", getToken()).
             setContentType(ContentType.JSON).
-            build();
-
-        RestAssured.responseSpecification = new ResponseSpecBuilder().
-            expectContentType(ContentType.JSON).
             build();
     }
 
@@ -59,6 +62,11 @@ public class Config {
     @After(value = "@terceiro", order = 2)
     public void doSomethingInterestingAfter() {
         System.out.println("after terceiro");
+    }
+
+    @After("@deleteAllUsers")
+    public void deleteAllUsers() {
+        userApi.deleteAllUsers();
     }
 
 }
