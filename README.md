@@ -12,6 +12,7 @@
 * Vídeo 1 - `01-basic-gradle-project`
 * Vídeo 2 - `02-first-feature`
 * Vídeo 3 - `03-first-implementation`
+* Vídeo 4 - `04-docstring`
 
 ### Requisitos:
 * Java 14
@@ -29,7 +30,7 @@
 1. [Criação do Projeto e suas dependências](https://youtu.be/YTKIVemoibA)
 1. [Criando Primerio Cenário](https://youtu.be/dmSimWz21RQ) 
 1. [Codando o Primeiro Cenário](https://youtu.be/qJyYvdAYZzY)
-
+1. [Devo usar DocString?](https://youtu.be/FVssrtDRs_o)
 
 ---
 
@@ -42,6 +43,7 @@
 * Video 1 - `01-basic-gradle-project`
 * Video 2 - `02-first-feature`
 * Video 3 - `03-first-implementation`
+* Video 4 - `04-docstring`
 
 ### Requirements:
 * Java 14
@@ -58,4 +60,5 @@
 1. [Creating the Project and its dependencies](https://youtu.be/0i72N1Fz_y0) 
 1. [Creating the First Scenario](https://youtu.be/A3uiR4quZr4) 
 1. [Implementing the First Scenario](https://youtu.be/uFoq-XtbBa0)
+1. [Should I use DocString?](https://youtu.be/M-S55a6ei1M)
 

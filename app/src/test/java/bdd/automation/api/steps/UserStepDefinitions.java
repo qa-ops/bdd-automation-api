@@ -1,5 +1,6 @@
 package bdd.automation.api.steps;
 
+import io.cucumber.docstring.DocString;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.java.pt.Então;
@@ -41,6 +42,23 @@ public class UserStepDefinitions {
         then().
             contentType(ContentType.JSON).
             statusCode(HttpStatus.SC_OK).
-            body("username", is( expectedUser.get("username")));
+            body("username", is(expectedUser.get("username")));
+    }
+
+    @When("I do a POST to {word} with the docstring:")
+    @Quando("eu faço um POST para {word} com a seguinte docString:")
+    public void iDoAPOSTToVUserWithTheDoctstring(String endpoint, DocString docString) {
+        expectedUser.put("username", "theUser");
+
+        given().
+            contentType(ContentType.JSON).
+            body(docString.getContent()).
+        when().
+            post("http://localhost:12345/api" + endpoint).
+        then().
+            contentType(ContentType.JSON).
+            statusCode(HttpStatus.SC_OK);
+
+
     }
 }
