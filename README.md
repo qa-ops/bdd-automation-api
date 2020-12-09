@@ -32,7 +32,6 @@
 1. [Codando o Primeiro Cenário](https://youtu.be/qJyYvdAYZzY)
 1. [Devo usar DocString?](https://youtu.be/FVssrtDRs_o)
 
-
 ---
 
 # API Test Automation using BDD
