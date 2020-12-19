@@ -1,6 +1,7 @@
 package bdd.automation.api.support.api;
 
 import bdd.automation.api.support.domain.User;
+import lombok.Data;
 import org.apache.http.HttpStatus;
 
 import java.util.Arrays;
@@ -8,11 +9,13 @@ import java.util.List;
 
 import static io.restassured.RestAssured.given;
 
-
+@Data
 public class UserApi {
 
     private static final String CREATE_USER_ENDPOINT = "/v3/user";
     private static final String USER_ENDPOINT = "/v3/user/{name}";
+
+    private String name;
 
     public void createUser(User user) {
         given().
