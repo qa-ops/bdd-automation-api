@@ -2,12 +2,15 @@ package bdd.automation.api.steps;
 
 import bdd.automation.api.support.api.PetApi;
 import bdd.automation.api.support.domain.Pet;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
+import io.restassured.response.Response;
+import org.apache.http.HttpStatus;
 
 import java.util.List;
 
@@ -39,5 +42,21 @@ public class PetStepDefinitions {
     @Entao("eu recebo a lista de animais available")
     public void iReceiveAListOfPetsAvailable() {
         assertThat(actualPets, is(not(empty())));
+    }
+
+    @And("I receive another list of pets {word}")
+    public void iReceiveAnotherListOfPetsAvailable(String status) {
+        Response actualPetsAvailableResponse = petApi.getPetsResponseByStatus(status);
+
+        actualPets = actualPetsAvailableResponse.body().jsonPath().getList("", Pet.class);
+
+        actualPetsAvailableResponse.
+            then().
+                statusCode(HttpStatus.SC_OK).
+                body(
+                    "size()", is(actualPets.size()),
+                    "findAll { it.status == 'available' }.size()", is(actualPets.size())
+                );
+
     }
 }
