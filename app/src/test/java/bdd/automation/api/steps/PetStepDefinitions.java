@@ -8,6 +8,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
+import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
@@ -29,8 +30,8 @@ public class PetStepDefinitions {
     }
 
     @Given("that I have pets available")
-    @Dado("que eu possua animais available")
-    public void thatIHavePetsAvailable() {}
+    @Dado("que eu possua animais {}")
+    public void thatIHavePetsAvailable(String status) {}
 
     @When("I search for all pets {word}")
     @Quando("eu pesquiso por todos os animais {word}")
@@ -58,5 +59,15 @@ public class PetStepDefinitions {
                     "findAll { it.status == 'available' }.size()", is(actualPets.size())
                 );
 
+    }
+
+    @Então("eu recebo a lista com {int} animal/animais")
+    public void euReceboAListaComAnimais(int petsQuantity) {
+        assertThat(actualPets.size(), is(petsQuantity));
+    }
+
+    @Dado("que eu não possua animais {word}")
+    public void queEuNãoPossuaAnimaisSold(String status) {
+        petApi.deletePetsByStatus(status);
     }
 }
