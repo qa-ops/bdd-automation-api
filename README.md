@@ -34,7 +34,6 @@
 1. [Devo usar DocString?](https://youtu.be/FVssrtDRs_o)
 1. [Rest Assured config](https://youtu.be/Ca_z5m_GtpI)
 
-
 ---
 
 # API Test Automation using BDD
@@ -66,4 +65,3 @@
 1. [Implementing the First Scenario](https://youtu.be/uFoq-XtbBa0)
 1. [Should I use DocString?](https://youtu.be/M-S55a6ei1M)
 1. [Rest Assured Config](https://youtu.be/3jHMpmZfylY)
-
