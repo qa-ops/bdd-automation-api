@@ -18,18 +18,18 @@ Feature: Managing a user in the PetStore
 
   Scenario: Create a user in the petstore with docstring
     When I do a POST to /v3/user with the docstring:
-    """json
-        {
-          "id": 11,
-          "username": "theUser",
-          "firstName": "John",
-          "lastName": "James",
-          "email": "john@email.com",
-          "password": "12345",
-          "phone": "12345",
-          "userStatus": 1
-        }
-    """
+#    """json
+#        {
+#          "id": 11,
+#          "username": "theUser",
+#          "firstName": "John",
+#          "lastName": "James",
+#          "email": "john@email.com",
+#          "password": "12345",
+#          "phone": "12345",
+#          "userStatus": 1
+#        }
+#    """
     Then I receive the created user when I do a GET to /v3/user/theUser
 
 
