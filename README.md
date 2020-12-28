@@ -13,6 +13,7 @@
 * Vídeo 2 - `02-first-feature`
 * Vídeo 3 - `03-first-implementation`
 * Vídeo 4 - `04-docstring`
+* Vídeo 5 - `05-rest-assured-setup`
 
 ### Requisitos:
 * Java 14
@@ -31,6 +32,7 @@
 1. [Criando Primerio Cenário](https://youtu.be/dmSimWz21RQ) 
 1. [Codando o Primeiro Cenário](https://youtu.be/qJyYvdAYZzY)
 1. [Devo usar DocString?](https://youtu.be/FVssrtDRs_o)
+1. [Rest Assured config](https://youtu.be/Ca_z5m_GtpI)
 
 ---
 
@@ -44,6 +46,7 @@
 * Video 2 - `02-first-feature`
 * Video 3 - `03-first-implementation`
 * Video 4 - `04-docstring`
+* Video 5 - `05-rest-assured-setup`
 
 ### Requirements:
 * Java 14
@@ -61,4 +64,4 @@
 1. [Creating the First Scenario](https://youtu.be/A3uiR4quZr4) 
 1. [Implementing the First Scenario](https://youtu.be/uFoq-XtbBa0)
 1. [Should I use DocString?](https://youtu.be/M-S55a6ei1M)
-
+1. [Rest Assured Config](https://youtu.be/3jHMpmZfylY)

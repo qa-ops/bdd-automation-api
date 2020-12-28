@@ -25,12 +25,10 @@ public class UserStepDefinitions {
         expectedUser = user;
 
         given().
-            contentType(ContentType.JSON).
             body(user).
         when().
-            post("http://localhost:12345/api" + endpoint).
+            post(endpoint).
         then().
-            contentType(ContentType.JSON).
             statusCode(HttpStatus.SC_OK);
     }
 
@@ -38,9 +36,8 @@ public class UserStepDefinitions {
     @Então("quando faço um GET para {word}, o usuário criado é retornado")
     public void iReceiveTheCreatedUserWhenIDoAGETToVUserRafael(String endpoint) {
         when().
-            get("http://localhost:12345/api" + endpoint).
+            get(endpoint).
         then().
-            contentType(ContentType.JSON).
             statusCode(HttpStatus.SC_OK).
             body("username", is(expectedUser.get("username")));
     }
@@ -51,14 +48,10 @@ public class UserStepDefinitions {
         expectedUser.put("username", "theUser");
 
         given().
-            contentType(ContentType.JSON).
             body(docString.getContent()).
         when().
-            post("http://localhost:12345/api" + endpoint).
+            post(endpoint).
         then().
-            contentType(ContentType.JSON).
             statusCode(HttpStatus.SC_OK);
-
-
     }
 }
