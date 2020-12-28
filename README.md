@@ -36,7 +36,6 @@
 1. [Rest Assured config](https://youtu.be/Ca_z5m_GtpI)
 1. [Especificação por exemplo na prática](https://youtu.be/yZA65qXKxoQ)
 
-
 ---
 
 # API Test Automation using BDD
@@ -70,4 +69,3 @@
 1. [Should I use DocString?](https://youtu.be/M-S55a6ei1M)
 1. [Rest Assured Config](https://youtu.be/3jHMpmZfylY)
 1. [Hands on Specification by Example](https://youtu.be/wkePKVTevYM)
-
