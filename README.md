@@ -21,6 +21,7 @@
 * Vídeo 10 - `10-deleting-user-with-hooks`
 * Vídeo 11 - `11-mapping-more-complex-jsons`
 * Vídeo 12 - `12-deserialization`
+* Vídeo 13 - `13-understanding-restassured-syntax`
 * Vídeo 14 - `14-using-restassured-assertions`
 
 ### Requisitos:
@@ -71,6 +72,7 @@
 * Video 10 - `10-deleting-user-with-hooks`
 * Video 11 - `11-mapping-more-complex-jsons`
 * Video 12 - `12-deserialization`
+* Video 13 - `13-understanding-restassured-syntax`
 * Video 14 - `14-using-restassured-assertions`
 
 ### Requirements:
