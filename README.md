@@ -100,3 +100,4 @@
 1. [More complex jsons](https://youtu.be/YLuGI-j61MY)
 1. [Deserialization](https://youtu.be/dKdenUAI6iA)
 1. [RestAssured Old Syntax](https://youtu.be/1QUjfMs74bA)
+1. [RestAssured assertions](https://youtu.be/3R74ESRKm7o)
