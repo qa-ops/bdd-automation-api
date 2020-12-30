@@ -15,6 +15,7 @@
 * Vídeo 4 - `04-docstring`
 * Vídeo 5 - `05-rest-assured-setup`
 * Vídeo 6 - `06-specification-by-example-scenario`
+* Vídeo 7 - `07-cucumber-runner`
 
 ### Requisitos:
 * Java 14
@@ -35,6 +36,7 @@
 1. [Devo usar DocString?](https://youtu.be/FVssrtDRs_o)
 1. [Rest Assured config](https://youtu.be/Ca_z5m_GtpI)
 1. [Especificação por exemplo na prática](https://youtu.be/yZA65qXKxoQ)
+1. [criando o Executável](https://youtu.be/jSWksLZ9Z7M)
 
 ---
 
@@ -50,6 +52,7 @@
 * Video 4 - `04-docstring`
 * Video 5 - `05-rest-assured-setup`
 * Video 6 - `06-specification-by-example-scenario`
+* Video 7 - `07-cucumber-runner`
 
 ### Requirements:
 * Java 14
@@ -69,3 +72,4 @@
 1. [Should I use DocString?](https://youtu.be/M-S55a6ei1M)
 1. [Rest Assured Config](https://youtu.be/3jHMpmZfylY)
 1. [Hands on Specification by Example](https://youtu.be/wkePKVTevYM)
+1. [Runner Class](https://youtu.be/oqElg0mpfwY)

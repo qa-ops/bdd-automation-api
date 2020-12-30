@@ -16,6 +16,7 @@ Feature: Managing a user in the PetStore
       | userStatus | 1                |
     Then I receive the created user when I do a GET to /v3/user/rafael
 
+  @quarentine
   Scenario: Create a user in the petstore with docstring
     When I do a POST to /v3/user with the docstring:
 #    """json
