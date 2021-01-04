@@ -17,3 +17,17 @@ Funcionalidade: Gerenciamento de um animal da PetSore
     Dado que eu não possua animais sold
     Quando eu pesquiso por todos os animais sold
     Então eu recebo a lista com 0 animal
+
+  Esquema do Cenário: Lista animais pelo seu estado de venda
+    Dado que eu não possua animais sold
+    Quando eu pesquiso por todos os animais <estado>
+    Então eu recebo a lista com <quantidade> animais
+
+    Exemplos: Animais em estoque
+      | estado    | quantidade |
+      | available | 7          |
+      | pending   | 2          |
+
+    Exemplos: Animais sem estoque
+      | estado | quantidade |
+      | sold   | 0          |
