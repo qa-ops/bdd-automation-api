@@ -6,7 +6,6 @@ def book = [
         title:"Sayings of the Century"
     ],
     [
-
         author:"Evelyn Waugh",
         category:"fiction",
         price:12.99,
@@ -36,9 +35,12 @@ print book.findAll { it.price < 10 }
 print "\n\n"
 print book.findAll { it.price < 10 }.title
 print "\n\n"
+print book.author
+print "\n\n"
 print book.author.collect { it.length() }
 print "\n\n"
 print book.author.collect { it.length() }.sum()
 print "\n\n"
+print book.author*.length()
+print "\n\n"
 print book.author*.length().sum()
-
