@@ -1,8 +1,8 @@
 package bdd.automation.api.support.domain.builders;
 
-import bdd.automation.api.support.domain.Store;
+import bdd.automation.api.support.domain.Order;
 
-public class StoreBuilder {
+public class OrderBuilder {
     private int id;
     private int petId;
     private int quantity;
@@ -10,42 +10,42 @@ public class StoreBuilder {
     private String status;
     private boolean complete;
 
-    public StoreBuilder() {
+    public OrderBuilder() {
         reset();
     }
 
-    public StoreBuilder withId(int id) {
+    public OrderBuilder withId(int id) {
         this.id = id;
         return this;
     }
 
-    public StoreBuilder withPetId(int petId) {
+    public OrderBuilder withPetId(int petId) {
         this.petId = petId;
         return this;
     }
 
-    public StoreBuilder withQuantity(int quantity) {
+    public OrderBuilder withQuantity(int quantity) {
         this.quantity = quantity;
         return this;
     }
 
-    public StoreBuilder withShipDate(String shipDate) {
+    public OrderBuilder withShipDate(String shipDate) {
         this.shipDate = shipDate;
         return this;
     }
 
-    public StoreBuilder withStatus(String status) {
+    public OrderBuilder withStatus(String status) {
         this.status = status;
         return this;
     }
 
-    public StoreBuilder withComplete(Boolean complete) {
+    public OrderBuilder withComplete(Boolean complete) {
         this.complete = complete;
         return this;
     }
 
-    public Store build() {
-        return new Store(
+    public Order build() {
+        return new Order(
             id,
             petId,
             quantity,
@@ -59,7 +59,7 @@ public class StoreBuilder {
         id = 5;
         petId = 22;
         quantity = 10;
-        shipDate = "20/02/2021";
+        shipDate = "2021-02-20";
         status = "approved";
         complete = true;
     }

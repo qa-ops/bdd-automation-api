@@ -1,7 +1,6 @@
-# new feature
-# Tags: optional
+Feature: Managing the orders
 
-Feature: A description
-
-  Scenario: A scenario
-    Given something..
+  Scenario: Client creates an order
+    Given I have a pet available
+    When I order that pet
+    Then the order is approved
