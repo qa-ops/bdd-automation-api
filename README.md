@@ -25,6 +25,8 @@
 * Vídeo 14 - `14-using-restassured-assertions`
 * Vídeo 15 - `15-prepping-the-scenario`
 * Vídeo 16 - `16-scenario-outline`
+* Vídeo 17 - `17-asserting-with-groovy-collection`
+* Vídeo 18 - `18-creating-builder-from-scratch`
 
 ### Requisitos:
 * Java 14
@@ -55,6 +57,8 @@
 1. [Assertivas no RestAssured](https://youtu.be/hKuIhFwAhr0)
 1. [Preparando o cenário](https://youtu.be/CMXwL-w4pMg)
 1. [Esquema de Cenário](https://youtu.be/oK_mxMqArHw)
+1. [Assertivas com Coleções Groovy](https://youtu.be/Eox-7q2gT0g)
+1. [Criando builders do zero](https://youtu.be/vhbtYHOMIhE)
 
 ---
 
@@ -80,6 +84,8 @@
 * Video 14 - `14-using-restassured-assertions`
 * Video 15 - `15-prepping-the-scenario`
 * Video 16 - `16-scenario-outline`
+* Video 17 - `17-asserting-with-groovy-collection`
+* Video 18 - `18-creating-builder-from-scratch`
 
 ### Requirements:
 * Java 14
@@ -109,3 +115,5 @@
 1. [RestAssured assertions](https://youtu.be/3R74ESRKm7o)
 1. [Preparing the scenario](https://youtu.be/kEuTzrOjdhY)
 1. [Scenario Outline](https://youtu.be/ADRZoO5bUZw)
+1. [Assertions with Groovy Collections](https://youtu.be/Hzv0Rj3wOBY)
+1. [Creating builder from scratch](https://youtu.be/NDPm0ybVj2Q)
