@@ -1,5 +1,6 @@
 package bdd.automation.api.steps;
 
+import bdd.automation.api.support.api.UserApi;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.restassured.RestAssured;
@@ -8,6 +9,12 @@ import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
 
 public class Config {
+
+    private UserApi userApi;
+
+    public Config() {
+        userApi = new UserApi();
+    }
 
     @Before
     public void setup() {
@@ -20,49 +27,14 @@ public class Config {
             addHeader("Authorization", getToken()).
             setContentType(ContentType.JSON).
             build();
-
-        RestAssured.responseSpecification = new ResponseSpecBuilder().
-            expectContentType(ContentType.JSON).
-            build();
     }
 
     private String getToken() {
         return "grant access";
     }
 
-    @Before
-    public void doSomething() {
-        System.out.println("hook before");
-    }
-
-    @Before(value = "@first", order = 1)
-    public void doFirst() {
-        System.out.println("before first");
-    }
-
-    @Before(value = "@second", order = 2)
-    public void doSecond() {
-        System.out.println("before second");
-    }
-
-    @Before(value = "@third", order = 3)
-    public void doThird() {
-        System.out.println("before third");
-    }
-
-
-    @After(value = "@first", order = 3)
-    public void doLast() {
-        System.out.println("after first");
-    }
-
-    @After(value = "@second", order = 2)
-    public void doLast2() {
-        System.out.println("after second");
-    }
-
-    @After(value = "@third", order = 1)
-    public void doLast3() {
-        System.out.println("after third");
+    @After("@deleteAllUsers")
+    public void deleteAllUses() {
+        userApi.deleteAllUsers();
     }
 }
