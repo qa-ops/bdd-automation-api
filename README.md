@@ -17,6 +17,7 @@
 * Vídeo 6 - `06-specification-by-example-scenario`
 * Vídeo 7 - `07-cucumber-runner`
 * Vídeo 8 - `08-creating-clients`
+* Vídeo 9 - `09-cucumber-hooks`
 
 ### Requisitos:
 * Java 14
@@ -39,6 +40,7 @@
 1. [Especificação por exemplo na prática](https://youtu.be/yZA65qXKxoQ)
 1. [criando o Executável](https://youtu.be/jSWksLZ9Z7M)
 1. [Mapeando a API](https://youtu.be/ltgVZ8Pbjcc)
+1. [Criando Ganchos](https://youtu.be/TWkmPkelLd4)
 
 ---
 
@@ -56,6 +58,7 @@
 * Video 6 - `06-specification-by-example-scenario`
 * Video 7 - `07-cucumber-runner`
 * Video 8 - `08-creating-clients`
+* Video 9 - `09-cucumber-hooks`
 
 ### Requirements:
 * Java 14
@@ -77,3 +80,4 @@
 1. [Hands on Specification by Example](https://youtu.be/wkePKVTevYM)
 1. [Runner Class](https://youtu.be/oqElg0mpfwY)
 1. [Mapping the API](https://youtu.be/-_B2fFxfFdY)
+1. [Creating Hooks](https://youtu.be/Kg611Jv_ib8)
