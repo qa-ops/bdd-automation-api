@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id "io.freefair.lombok" version "5.3.0"
+    id 'com.avast.gradle.docker-compose' version "0.13.2"
 }
 
 repositories {
@@ -19,3 +20,5 @@ dependencies {
     testImplementation 'io.cucumber:cucumber-junit:6.8.+'
     testImplementation 'io.rest-assured:rest-assured:4.3.+'
 }
+
+dockerCompose.isRequiredBy(test)
