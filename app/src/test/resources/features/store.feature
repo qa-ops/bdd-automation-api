@@ -1,6 +1,6 @@
 Feature: Managing the orders
 
-  @DeleteExtraPets
+  @DeleteExtraPets @sanity
   Scenario: Client creates an order
     Given I have a pet available
     When I order that pet
