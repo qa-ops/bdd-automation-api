@@ -19,6 +19,7 @@
 * Vídeo 8 - `08-creating-clients`
 * Vídeo 9 - `09-cucumber-hooks`
 * Vídeo 10 - `10-deleting-user-with-hooks`
+* Video 11 - `11-mapping-more-complex-jsons`
 
 ### Requisitos:
 * Java 14
@@ -43,6 +44,7 @@
 1. [Mapeando a API](https://youtu.be/ltgVZ8Pbjcc)
 1. [Criando Ganchos](https://youtu.be/TWkmPkelLd4)
 1. [Limpando os Dados](https://youtu.be/TWkmPkelLd4)
+1. [Json mais complexos](https://youtu.be/ORZwGUocE4E)
 
 ---
 
@@ -62,6 +64,7 @@
 * Video 8 - `08-creating-clients`
 * Video 9 - `09-cucumber-hooks`
 * Video 10 - `10-deleting-user-with-hooks`
+* Video 11 - `11-mapping-more-complex-jsons`
 
 ### Requirements:
 * Java 14
@@ -85,3 +88,4 @@
 1. [Mapping the API](https://youtu.be/-_B2fFxfFdY)
 1. [Creating Hooks](https://youtu.be/Kg611Jv_ib8)
 1. [Cleaning the Data](https://youtu.be/IkH6gk2gNNQ)
+1. [More complex jsons](https://youtu.be/YLuGI-j61MY)

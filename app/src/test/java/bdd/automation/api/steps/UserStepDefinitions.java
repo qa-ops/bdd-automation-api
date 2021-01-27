@@ -15,7 +15,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class UserStepDefinitions {
 
     private User expectedUser;
-    private final UserApi userApi;
+    private UserApi userApi;
 
     public UserStepDefinitions() {
         userApi = new UserApi();
