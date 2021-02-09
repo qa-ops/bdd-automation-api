@@ -5,7 +5,7 @@
    História do Jira
    O que fizer sentido para o negócio
 
-   @deleteAllUsers @sanidade
+   @deleteAllUsers @sanity
   Cenario: Cria usuário na loja refletindo o negócio
      Quando crio um usuário
      Então o usuário é salvo no sistema
