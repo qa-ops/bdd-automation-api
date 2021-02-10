@@ -19,7 +19,8 @@
 * Vídeo 8 - `08-creating-clients`
 * Vídeo 9 - `09-cucumber-hooks`
 * Vídeo 10 - `10-deleting-user-with-hooks`
-* Video 11 - `11-mapping-more-complex-jsons`
+* Vídeo 11 - `11-mapping-more-complex-jsons`
+* Vídeo 12 - `12-deserialization`
 
 ### Requisitos:
 * Java 14
@@ -45,6 +46,7 @@
 1. [Criando Ganchos](https://youtu.be/TWkmPkelLd4)
 1. [Limpando os Dados](https://youtu.be/TWkmPkelLd4)
 1. [Json mais complexos](https://youtu.be/ORZwGUocE4E)
+1. [Desserialização](https://youtu.be/JJtHzUfo8us)
 
 ---
 
@@ -65,6 +67,7 @@
 * Video 9 - `09-cucumber-hooks`
 * Video 10 - `10-deleting-user-with-hooks`
 * Video 11 - `11-mapping-more-complex-jsons`
+* Video 12 - `12-deserialization`
 
 ### Requirements:
 * Java 14
@@ -89,3 +92,4 @@
 1. [Creating Hooks](https://youtu.be/Kg611Jv_ib8)
 1. [Cleaning the Data](https://youtu.be/IkH6gk2gNNQ)
 1. [More complex jsons](https://youtu.be/YLuGI-j61MY)
+1. [Deserialization](https://youtu.be/dKdenUAI6iA)
