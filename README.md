@@ -21,6 +21,7 @@
 * Vídeo 10 - `10-deleting-user-with-hooks`
 * Vídeo 11 - `11-mapping-more-complex-jsons`
 * Vídeo 12 - `12-deserialization`
+* Vídeo 13 - `13-understanding-restassured-syntax`
 
 ### Requisitos:
 * Java 14
@@ -47,6 +48,7 @@
 1. [Limpando os Dados](https://youtu.be/TWkmPkelLd4)
 1. [Json mais complexos](https://youtu.be/ORZwGUocE4E)
 1. [Desserialização](https://youtu.be/JJtHzUfo8us)
+1. [Sintaxe antiga do RestAssured](https://youtu.be/b-yLVlV8zrs)
 
 ---
 
@@ -68,6 +70,7 @@
 * Video 10 - `10-deleting-user-with-hooks`
 * Video 11 - `11-mapping-more-complex-jsons`
 * Video 12 - `12-deserialization`
+* Video 13 - `13-understanding-restassured-syntax`
 
 ### Requirements:
 * Java 14
@@ -93,3 +96,4 @@
 1. [Cleaning the Data](https://youtu.be/IkH6gk2gNNQ)
 1. [More complex jsons](https://youtu.be/YLuGI-j61MY)
 1. [Deserialization](https://youtu.be/dKdenUAI6iA)
+1. [RestAssured Old Syntax](https://youtu.be/1QUjfMs74bA)
