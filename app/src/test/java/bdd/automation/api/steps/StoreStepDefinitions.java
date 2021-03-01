@@ -61,7 +61,7 @@ public class StoreStepDefinitions {
                     body(
                             "id",is(expectedOrder.getId()),
                             "petId", is(expectedPet.getId()),
-                            "quantity", is(expectedOrder.getQuantity()),
+                            "quantity", is(100),
                             "status", is("approved")
                     );
 
