@@ -57,7 +57,7 @@ jobs:
             gradle sanityTest
           when: always
       - store_test_results:
-          path: app/build/reports
+          path: app/build/test-results
       - store_artifacts:
           path: app/build/reports
 
