@@ -60,3 +60,12 @@ jobs:
           path: app/build/test-results
       - store_artifacts:
           path: app/build/reports
+
+workflows:
+  version: 2
+  qaops-bdd:
+    jobs:
+      - build
+      - sanityTests:
+          requires:
+            - build
