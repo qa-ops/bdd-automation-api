@@ -57,9 +57,9 @@ jobs:
             gradle sanityTest
           when: always
       - store_test_results:
-          path: reports
+          path: build/reports
       - store_artifacts:
-          path: reports
+          path: build/reports
 
 workflows:
   version: 2
