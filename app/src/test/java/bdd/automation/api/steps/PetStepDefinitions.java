@@ -54,7 +54,7 @@ public class PetStepDefinitions {
             then().
                 statusCode(HttpStatus.SC_OK).
                 body(
-                    "size()", is(50),
+                    "size()", is(actualPets.size()),
                     "findAll { it.status == '"+status+"' }.size()", is(actualPets.size())
                 );
 
