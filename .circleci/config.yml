@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/openjdk:8-jdk
+      - image: cimg/openjdk:14.0.2
 
     working_directory: ~/repo
 
@@ -39,7 +39,7 @@ jobs:
             - gradle
   sanityTests:
     docker:
-      - image: circleci/openjdk:8-jdk
+      - image: cimg/openjdk:14.0.2
       - image: swaggerapi/petstore3:unstable
     environment:
       ENV: circle
