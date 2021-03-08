@@ -22,14 +22,19 @@ dependencies {
     testImplementation 'org.aeonbits.owner:owner:1.0.+'
 }
 
+test {
+    systemProperty "cucumber.plugin", "pretty, html:${CUCUMBER_REPORT}"
+}
 
 task apiTest(type: Test) {}
 
 task sanityTest(type: Test) {
     environment "CUCUMBER_FILTER_TAGS", "@sanity"
+    environment "CUCUMBER_PLUGIN", "pretty, html:${CUCUMBER_REPORT}"
 }
 
 task regressionTest(type: Test) {
+    systemProperty "cucumber.plugin", "pretty, html:${CUCUMBER_REPORT}"
     systemProperty "cucumber.filter.tags", "not @wip and not @quarantine and not @sanity"
 }
 
