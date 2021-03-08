@@ -41,12 +41,12 @@ jobs:
     docker:
       - image: cimg/openjdk:15.0.1
     steps:
-      run: echo "Unit Tests"
+      - run: echo "unit test"
   frontEndUnitTests:
     docker:
       - image: cimg/openjdk:15.0.1
     steps:
-      run: echo "Front end Unit Tests"
+      - run: echo "ront end unit test"
   sanityTests:
     docker:
       - image: cimg/openjdk:15.0.1
