@@ -37,6 +37,16 @@ jobs:
           root: .
           paths:
             - gradle
+  unitTests:
+    docker:
+      - image: cimg/openjdk:15.0.1
+    steps:
+      run: echo "Unit Tests"
+  frontEndUnitTests:
+    docker:
+      - image: cimg/openjdk:15.0.1
+    steps:
+      run: echo "Front end Unit Tests"
   sanityTests:
     docker:
       - image: cimg/openjdk:15.0.1
@@ -89,9 +99,16 @@ workflows:
   qaops-bdd:
     jobs:
       - build
+      - unitTests:
+          requires:
+            - build
+      - frontEndUnitTests:
+          requires:
+            - build
       - sanityTests:
           requires:
-            - build
+            - unitTests
+            - frontEndUnitTests
       - regressionTests:
           requires:
-            - build
+            - sanityTests
