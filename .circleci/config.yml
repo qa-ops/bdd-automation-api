@@ -92,10 +92,6 @@ workflows:
       - sanityTests:
           requires:
             - build
-          filters:
-            branches:
-              only:
-                - 31-pipeline-strategy
       - regressionTests:
           requires:
-            - sanityTests
+            - build
