@@ -95,7 +95,7 @@ workflows:
           filters:
             branches:
               only:
-                - main
+                - 31-pipeline-strategy
       - regressionTests:
           requires:
             - sanityTests
