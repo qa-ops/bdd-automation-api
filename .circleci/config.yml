@@ -92,6 +92,10 @@ workflows:
       - sanityTests:
           requires:
             - build
+          filters:
+            branches:
+              only:
+                - main
       - regressionTests:
           requires:
             - sanityTests
