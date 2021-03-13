@@ -7,3 +7,13 @@ Funcionalidade: Gerenciamento de um animal da PetSore
     Então eu recebo a lista de animais available
 #   Passo duplicado, somente para exemplo
     E eu recebo uma outra lista de animais available
+
+  Cenario: Lista somente animais pending
+    Dado que eu possua animais pending
+    Quando eu pesquiso por todos os animais pending
+    Então eu recebo a lista com 2 animais
+
+  Cenario: Não lista nenhum animal
+    Dado que eu não possua animais sold
+    Quando eu pesquiso por todos os animais sold
+    Então eu recebo a lista com 0 animal

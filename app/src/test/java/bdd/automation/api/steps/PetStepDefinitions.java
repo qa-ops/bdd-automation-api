@@ -6,10 +6,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.java.pt.Dado;
-import io.cucumber.java.pt.E;
-import io.cucumber.java.pt.Entao;
-import io.cucumber.java.pt.Quando;
+import io.cucumber.java.pt.*;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 
@@ -29,9 +26,9 @@ public class PetStepDefinitions {
         petApi = new PetApi();
     }
 
-    @Given("that I have pets available")
-    @Dado("que eu possua animais available")
-    public void thatIHavePetsAvailable() {}
+    @Given("that I have pets {word}")
+    @Dado("que eu possua animais {word}")
+    public void thatIHavePetsAvailable(String status) {}
 
     @When("I search for all pets {word}")
     @Quando("eu pesquiso por todos os animais {word}")
@@ -48,17 +45,29 @@ public class PetStepDefinitions {
     @And("I receive another list of pets {word}")
     @E("eu recebo uma outra lista de animais {word}")
     public void iReceiveAnotherListOfPetsAvailable(String status) {
-        Response actualPetsAvailableResponse = petApi.getPetsResponseByStatus(status);
+        Response actualPetsResponse = petApi.getPetsResponseByStatus(status);
 
-        actualPets = actualPetsAvailableResponse.body().jsonPath().getList("", Pet.class);
+        actualPets = actualPetsResponse.body().jsonPath().getList("", Pet.class);
 
-        actualPetsAvailableResponse.
+        actualPetsResponse.
             then().
                 statusCode(HttpStatus.SC_OK).
                 body(
                     "size()", is(actualPets.size()),
-                    "findAll { it.status == 'available' }.size()", is(actualPets.size())
+                    "findAll { it.status == '"+status+"' }.size()", is(actualPets.size())
                 );
 
+    }
+
+    @Então("eu recebo a lista com {int} animal/animais")
+    @Then("I receive a list of {int} pet(s)")
+    public void iReceiveAListOfPets(int petsQuantity) {
+        assertThat(actualPets.size(), is(petsQuantity));
+    }
+
+    @Dado("que eu não possua animais {word}")
+    @Given("that I don't have pets {word}")
+    public void thatIdontHavePets(String status) {
+        petApi.deletePetsByStatus(status);
     }
 }
