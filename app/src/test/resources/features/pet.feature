@@ -30,3 +30,9 @@ Feature: Manage a pet in the PetSore
     Examples: Pets not in stock
       | status | quantity |
       | sold   | 0        |
+
+  Scenario: List pets available for selling
+    Given that I have pets available
+    When I do a search for all pets available
+    Then I receive a list of 7 pets available
+    And 3 pets has the name Lion
