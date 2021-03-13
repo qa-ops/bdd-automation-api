@@ -5,7 +5,7 @@ import io.restassured.response.Response;
 
 import java.util.List;
 
-import static io.restassured.RestAssured.*;
+import static io.restassured.RestAssured.given;
 
 public class PetApi {
 
