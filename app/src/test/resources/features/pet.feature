@@ -16,3 +16,17 @@ Feature: Manage a pet in the PetSore
     Given that I don't have pets sold
     When I search for all pets sold
     Then I receive a list of 0 pet
+
+  Scenario Outline: List pets by its selling state
+    Given that I don't have pets sold
+    When I search for all pets <status>
+    Then I receive a list of <quantity> pets
+
+    Examples: Pets in stock
+      | status    | quantity |
+      | available | 7        |
+      | pending   | 2        |
+
+    Examples: Pets not in stock
+      | status | quantity |
+      | sold   | 0        |

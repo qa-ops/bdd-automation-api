@@ -24,6 +24,7 @@
 * Vídeo 13 - `13-understanding-restassured-syntax`
 * Vídeo 14 - `14-using-restassured-assertions`
 * Vídeo 15 - `15-prepping-the-scenario`
+* Vídeo 16 - `16-scenario-outline`
 
 ### Requisitos:
 * Java 14
@@ -53,6 +54,7 @@
 1. [Sintaxe antiga do RestAssured](https://youtu.be/b-yLVlV8zrs)
 1. [Assertivas no RestAssured](https://youtu.be/hKuIhFwAhr0)
 1. [Preparando o cenário](https://youtu.be/CMXwL-w4pMg)
+1. [Esquema de Cenário](https://youtu.be/oK_mxMqArHw)
 
 ---
 
@@ -77,6 +79,7 @@
 * Video 13 - `13-understanding-restassured-syntax`
 * Video 14 - `14-using-restassured-assertions`
 * Video 15 - `15-prepping-the-scenario`
+* Video 16 - `16-scenario-outline`
 
 ### Requirements:
 * Java 14
@@ -105,3 +108,4 @@
 1. [RestAssured Old Syntax](https://youtu.be/1QUjfMs74bA)
 1. [RestAssured assertions](https://youtu.be/3R74ESRKm7o)
 1. [Preparing the scenario](https://youtu.be/kEuTzrOjdhY)
+1. [Scenario Outline](https://youtu.be/ADRZoO5bUZw)

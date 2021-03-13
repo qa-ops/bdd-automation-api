@@ -59,8 +59,8 @@ public class PetStepDefinitions {
 
     }
 
-    @Então("eu recebo a lista com {int} animal/animais")
-    @Then("I receive a list of {int} pet(s)")
+    @Então("eu recebo a lista com {} animal/animais")
+    @Then("I receive a list of {} pet(s)")
     public void iReceiveAListOfPets(int petsQuantity) {
         assertThat(actualPets.size(), is(petsQuantity));
     }
