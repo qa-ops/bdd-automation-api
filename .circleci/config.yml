@@ -1,13 +1,17 @@
-# Java Gradle CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-java/ for more details
-#
+containerSetup: &containerSetup
+  docker:
+    - image: cimg/openjdk:15.0.1
+    - image: swaggerapi/petstore3:unstable
+  environment:
+    ENV: circle
+  working_directory: ~/repo
+
 version: 2
 jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/openjdk:8-jdk
+      - image: cimg/openjdk:15.0.1
 
     working_directory: ~/repo
 
@@ -22,7 +26,7 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "build.gradle" }}
+            - v1-dependencies-{{ checksum "app/build.gradle" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
@@ -31,33 +35,57 @@ jobs:
       - save_cache:
           paths:
             - ~/.gradle
-          key: v1-dependencies-{{ checksum "build.gradle" }}
+          key: v1-dependencies-{{ checksum "app/build.gradle" }}
 
       - persist_to_workspace:
           root: .
           paths:
             - gradle
-
   sanityTests:
-    docker:
-      - image: circleci/openjdk:8-jdk
-      - image: swaggerapi/petstore3:unstable
-    environment:
-      ENV: circle
-    working_directory: ~/repo
+    <<: *containerSetup
     steps:
       - checkout
       - attach_workspace:
           at: ~/repo
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "build.gradle" }}
+            - v1-dependencies-{{ checksum "app/build.gradle" }}
       - run:
           name: Sanity Cucumber Tests
           command: |
             gradle sanityTest
           when: always
       - store_test_results:
-          path: reports
+          path: app/build/test-results
       - store_artifacts:
-          path: reports
+          path: app/build/reports
+  regressionTests:
+    <<: *containerSetup
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/repo
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "app/build.gradle" }}
+      - run:
+          name: Regression Cucumber Tests
+          command: |
+            gradle regressionTest
+          when: always
+      - store_test_results:
+          path: app/build/test-results
+      - store_artifacts:
+          path: app/build/reports
+
+workflows:
+  version: 2
+  qaops-bdd:
+    jobs:
+      - build
+      - sanityTests:
+          requires:
+            - build
+      - regressionTests:
+          requires:
+            - sanityTests

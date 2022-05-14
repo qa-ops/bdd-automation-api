@@ -32,3 +32,5 @@ build
 .idea
 
 .DS_STORE
+
+.history/
