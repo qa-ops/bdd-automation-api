@@ -1,11 +1,11 @@
 plugins {
     id 'java'
-    id "io.freefair.lombok" version "5.3.0"
-    id 'com.avast.gradle.docker-compose' version "0.13.2"
+    id "io.freefair.lombok" version "6.4.3"
+    id 'com.avast.gradle.docker-compose' version "0.16.4"
 }
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 java {
@@ -14,7 +14,7 @@ java {
 }
 
 dependencies {
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.11.+'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.+'
 
     testImplementation 'io.cucumber:cucumber-java:6.8.+'
     testImplementation 'io.cucumber:cucumber-junit:6.8.+'
